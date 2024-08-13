@@ -1,0 +1,14 @@
+#lockedDoor {
+  top: 204px;
+  left: 597px;
+  width: 143px;
+  height: 262px;
+}
+
+#pillow {
+  top: 394px;
+  left: 294px;
+  width: 44px;
+  height: 44px;
+  transform: rotate(11deg);
+}

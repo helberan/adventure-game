@@ -1,0 +1,41 @@
+#toWorkRoom {
+  top: 188px;
+  right: 131px;
+  width: 79px;
+  height: 330px;
+}
+
+#toLivingRoomDown {
+  bottom: 23px;
+  right: 619px;
+  width: 40px;
+  height: 41px;
+}
+
+#toLivingRoomUp {
+  bottom: 23px;
+  right: 619px;
+  width: 40px;
+  height: 41px;
+}
+
+#toLivingRoom {
+  top: 188px;
+  left: 131px;
+  width: 79px;
+  height: 359px;
+}
+
+#toLivingRoomRight {
+  top: 199px;
+  right: 102px;
+  width: 79px;
+  height: 358px;
+}
+
+#toBathroom {
+  top: 188px;
+  left: 131px;
+  width: 79px;
+  height: 359px;
+}
