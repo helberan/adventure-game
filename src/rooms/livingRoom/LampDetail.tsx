@@ -12,6 +12,7 @@ export const LampDetail = () => {
     console.log(`clicked ${item}`);
     if (item === 'key') {
       setKeyPickedUp(true);
+      localStorage.setItem('keyPickedUp', 'true');
     }
   };
 
@@ -24,7 +25,7 @@ export const LampDetail = () => {
       <div className="image-container">
         <img src={LampDetailImage} />
         <div className="clickable-area" id="cross" onClick={() => handleViewChange('living-room-two')} />
-        {!keyPickedUp && (
+        {localStorage.getItem('keyPickedUp') !== 'true' && (
           <div className="key-area">
             <img src={keyImage} onClick={() => handleItemClick('key')} />
           </div>

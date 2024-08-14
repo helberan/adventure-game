@@ -8,7 +8,6 @@ export const DeskDetail = () => {
   const navigate = useNavigate();
   const [code, setCode] = useState<string>('');
   const [codeError, setCodeError] = useState<boolean>(false);
-  const [loginSuccesful, setLoginSuccesful] = useState<boolean>(false);
 
   const handleViewChange = (path: string) => {
     navigate(`/${path}`);
@@ -22,7 +21,7 @@ export const DeskDetail = () => {
     } else {
       console.log('code submitted: ', code);
       setCodeError(false);
-      setLoginSuccesful(true);
+      localStorage.setItem('pcUnlocked', 'true');
     }
   };
 
@@ -38,7 +37,7 @@ export const DeskDetail = () => {
         <div className="clickable-area" id="toBookDetail" onClick={() => handleViewChange('wr-book')} />
         <div className="pc-area">
           <div className="pc-area-wrapper">
-            {loginSuccesful ? (
+            {localStorage.getItem('pcUnlocked') === 'true' ? (
               <div className="symbols">
                 <code>&yen;</code>
                 <code>&curren;</code>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Modal } from '../../Modal';
 import livingRoomOneImage from '../../assets/living-room-1.png';
@@ -16,6 +16,7 @@ export const LivingRoomOne = () => {
     console.log(`clicked ${item}`);
     if (item === 'picture') {
       setPictureClicked(!pictureClicked);
+      localStorage.setItem('picturePosition', 'true');
     }
     setIsModalVisible(!isModalVisible);
     setModalContent(item);
@@ -31,7 +32,7 @@ export const LivingRoomOne = () => {
         <img src={livingRoomOneImage} />
         <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('living-room-two')} />
         <div className="clickable-area" id="toPillowDetail" onClick={() => handleViewChange('lr-pillow')} />
-        <div className={pictureClicked ? `picture-area-clicked` : `picture-area`}>
+        <div className={localStorage.getItem('picturePosition') === 'true' ? `picture-area-clicked` : `picture-area`}>
           <img src={pictureImage} onClick={() => handleItemClick('picture')} />
         </div>
       </div>
