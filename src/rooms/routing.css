@@ -1,6 +1,12 @@
+.clickable-area {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+}
+
 /*ROOM ROUTING*/
 
 #rightDoor {
+  cursor: pointer;
   top: 188px;
   right: 131px;
   width: 79px;
@@ -8,6 +14,7 @@
 }
 
 #leftDoor {
+  cursor: pointer;
   top: 188px;
   left: 131px;
   width: 79px;
@@ -15,6 +22,7 @@
 }
 
 #arrowDown {
+  cursor: pointer;
   bottom: 23px;
   right: 619px;
   width: 40px;
@@ -52,6 +60,7 @@
 }
 
 #cross {
+  cursor: pointer;
   top: 38px;
   right: 92px;
   width: 56px;

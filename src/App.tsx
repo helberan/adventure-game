@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="game-view">
       <Router>
-        <p>game</p>
         <Routes>
           <Route path="/living-room-two" element={<LivingRoomTwo />} />
           <Route path="/work-room" element={<WorkRoom />} />
@@ -24,7 +23,6 @@ function App() {
           <Route path="/lr-notebook" element={<NotebookDetail />} />
           <Route path="/lr-lamp" element={<LampDetail />} />
         </Routes>
-        <p>Inventory</p>
       </Router>
     </div>
   );

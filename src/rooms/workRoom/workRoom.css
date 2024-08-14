@@ -1,6 +1,5 @@
 .pc-area {
   position: absolute;
-  border: 1px solid blue;
   top: 53px;
   right: 250px;
   width: 421px;
@@ -13,6 +12,17 @@
   justify-content: center;
   width: 421px;
   height: 236px;
+}
+
+.pc-area-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.code-error {
+  color: red;
+  margin-top: 0.5rem;
 }
 
 .symbols {

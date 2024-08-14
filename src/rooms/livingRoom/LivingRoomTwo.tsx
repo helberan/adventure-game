@@ -12,13 +12,12 @@ export const LivingRoomTwo = () => {
 
   const handleItemClick = (item: string) => {
     const isKeyPickedUp = localStorage.getItem('keyPickedUp');
-    console.log(`clicked ${item}`);
     if (item === 'locked door' && isKeyPickedUp) {
       setModalContent('Door unlocked!');
       localStorage.clear();
     } else {
       setIsModalVisible(!isModalVisible);
-      setModalContent('Need to find key');
+      setModalContent('I need to find a key!');
     }
   };
 

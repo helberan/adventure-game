@@ -8,6 +8,7 @@ export const DeskDetail = () => {
   const navigate = useNavigate();
   const [code, setCode] = useState<string>('');
   const [codeError, setCodeError] = useState<boolean>(false);
+  const [pcUnlocked, setPcUnlocked] = useState<boolean>(false);
 
   const handleViewChange = (path: string) => {
     navigate(`/${path}`);
@@ -22,12 +23,14 @@ export const DeskDetail = () => {
       console.log('code submitted: ', code);
       setCodeError(false);
       localStorage.setItem('pcUnlocked', 'true');
+      setPcUnlocked(true);
     }
   };
 
   useEffect(() => {
-    console.log(code);
-  }, [code]);
+    const unlocked = localStorage.getItem('pcUnlocked') === 'true';
+    setPcUnlocked(unlocked);
+  }, []);
 
   return (
     <div className="location">
@@ -37,7 +40,7 @@ export const DeskDetail = () => {
         <div className="clickable-area" id="toBookDetail" onClick={() => handleViewChange('wr-book')} />
         <div className="pc-area">
           <div className="pc-area-wrapper">
-            {localStorage.getItem('pcUnlocked') === 'true' ? (
+            {pcUnlocked ? (
               <div className="symbols">
                 <code>&yen;</code>
                 <code>&curren;</code>
@@ -46,9 +49,11 @@ export const DeskDetail = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                <input type="text" maxLength={4} placeholder="PIN" onChange={(e) => setCode(e.target.value)} />
-                <button type="submit">Submit</button>
-                {codeError && <p>Wrong password</p>}
+                <div>
+                  <input type="text" maxLength={4} placeholder="PIN" onChange={(e) => setCode(e.target.value)} />
+                  <button type="submit">Submit</button>
+                </div>
+                {codeError && <div className="code-error">Wrong password</div>}
               </form>
             )}
           </div>
