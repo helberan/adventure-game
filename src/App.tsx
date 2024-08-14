@@ -14,14 +14,14 @@ function App() {
     <div className="game-view">
       <Router>
         <Routes>
-          <Route path="/living-room-two" element={<LivingRoomTwo />} />
-          <Route path="/work-room" element={<WorkRoom />} />
-          <Route path="/wr-desk" element={<DeskDetail />} />
-          <Route path="/wr-book" element={<BookDetail />} />
-          <Route path="/living-room-one" element={<LivingRoomOne />} />
-          <Route path="/lr-pillow" element={<PillowDetail />} />
-          <Route path="/lr-notebook" element={<NotebookDetail />} />
-          <Route path="/lr-lamp" element={<LampDetail />} />
+          <Route path="/adventure-game" element={<LivingRoomTwo />} />
+          <Route path="/adventure-game/work-room" element={<WorkRoom />} />
+          <Route path="/adventure-game/wr-desk" element={<DeskDetail />} />
+          <Route path="/adventure-game/wr-book" element={<BookDetail />} />
+          <Route path="/adventure-game/living-room-one" element={<LivingRoomOne />} />
+          <Route path="/adventure-game/lr-pillow" element={<PillowDetail />} />
+          <Route path="/adventure-game/lr-notebook" element={<NotebookDetail />} />
+          <Route path="/adventure-game/lr-lamp" element={<LampDetail />} />
         </Routes>
       </Router>
     </div>

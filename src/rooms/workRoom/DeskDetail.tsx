@@ -11,7 +11,7 @@ export const DeskDetail = () => {
   const [pcUnlocked, setPcUnlocked] = useState<boolean>(false);
 
   const handleViewChange = (path: string) => {
-    navigate(`/${path}`);
+    navigate(`/adventure-game/${path}`);
   };
 
   const handleSubmit = (e: FormEvent) => {

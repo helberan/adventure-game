@@ -17,7 +17,7 @@ export const LampDetail = () => {
   };
 
   const handleViewChange = (path: string) => {
-    navigate(`/${path}`);
+    navigate(`/adventure-game/${path}`);
   };
 
   return (

@@ -6,7 +6,7 @@ export const NotebookDetail = () => {
   const navigate = useNavigate();
 
   const handleViewChange = (path: string) => {
-    navigate(`/${path}`);
+    navigate(`/adventure-game/${path}`);
   };
 
   return (

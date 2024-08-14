@@ -17,14 +17,14 @@ export const LivingRoomOne = () => {
   };
 
   const handleViewChange = (path: string) => {
-    navigate(`/${path}`);
+    navigate(`/adventure-game/${path}`);
   };
 
   return (
     <div className="location">
       <div className="image-container">
         <img src={livingRoomOneImage} />
-        <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('living-room-two')} />
+        <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('')} />
         <div className="clickable-area" id="toPillowDetail" onClick={() => handleViewChange('lr-pillow')} />
         <div className={localStorage.getItem('picturePosition') === 'true' ? `picture-area-clicked` : `picture-area`}>
           <img src={pictureImage} onClick={() => handleItemClick('picture')} />

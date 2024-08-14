@@ -22,7 +22,7 @@ export const LivingRoomTwo = () => {
   };
 
   const handleViewChange = (path: string) => {
-    navigate(`/${path}`);
+    navigate(`/adventure-game/${path}`);
   };
 
   return (
