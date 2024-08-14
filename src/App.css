@@ -5,7 +5,6 @@
 }
 
 .location {
-  border: 1px solid red;
   width: 80rem;
   height: 41rem;
   margin-top: 6rem;
@@ -22,4 +21,8 @@
 .image-container img {
   width: 100%;
   height: auto;
+}
+
+.modal {
+  font-size: larger;
 }
