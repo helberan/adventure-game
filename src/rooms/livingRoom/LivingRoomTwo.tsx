@@ -25,6 +25,7 @@ export const LivingRoomTwo = () => {
       <div className="image-container">
         <img src={livingRoomImage} />
         <div className="clickable-area" id="lockedDoor" onClick={() => handleItemClick('locked door')} />
+        <div className="clickable-area" id="lamp" onClick={() => handleViewChange('lr-lamp')} />
         <div className="clickable-area" id="rightDoor" onClick={() => handleViewChange('work-room')} />
         <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('living-room-one')} />
       </div>

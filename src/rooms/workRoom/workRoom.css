@@ -1,4 +1,4 @@
-#pc-code {
+.pc-area {
   position: absolute;
   border: 1px solid blue;
   top: 53px;
@@ -7,3 +7,20 @@
   height: 236px;
 }
 
+.pc-area-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 421px;
+  height: 236px;
+}
+
+.symbols {
+  display: flex;
+}
+
+.symbols code {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 1rem;
+}

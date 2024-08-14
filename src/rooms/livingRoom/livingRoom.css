@@ -5,10 +5,51 @@
   height: 262px;
 }
 
-#pillow {
-  top: 394px;
-  left: 294px;
-  width: 44px;
-  height: 44px;
-  transform: rotate(11deg);
+#lamp {
+  top: 230px;
+  left: 234px;
+  width: 94px;
+  height: 55px;
+}
+
+#picture {
+  top: 230px;
+  left: 234px;
+  width: 94px;
+  height: 55px;
+}
+
+.picture-area {
+  position: absolute;
+  top: 124px;
+  right: 584px;
+  width: 144px;
+  height: auto;
+}
+
+.picture-area-clicked {
+  position: absolute;
+  top: 124px;
+  right: 531px;
+  width: 144px;
+  height: auto;
+  transform: rotate(-25deg);
+}
+
+.picture-area img {
+  width: 144px;
+  height: auto;
+}
+
+.key-area {
+  position: absolute;
+  top: 124px;
+  right: 584px;
+  width: 205px;
+  height: auto;
+}
+
+.key-area img {
+  width: 205px;
+  height: auto;
 }

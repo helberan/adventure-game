@@ -3,7 +3,7 @@ import workRoomBookImage from '../../assets/wr-desk-book-detail.png';
 import './workRoom.css';
 import '../routing.css';
 
-export const WorkRoomBook = () => {
+export const BookDetail = () => {
   const navigate = useNavigate();
 
   const handleViewChange = (path: string) => {
