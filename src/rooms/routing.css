@@ -1,41 +1,59 @@
-#toWorkRoom {
+/*ROOM ROUTING*/
+
+#rightDoor {
   top: 188px;
   right: 131px;
   width: 79px;
   height: 330px;
 }
 
-#toLivingRoomDown {
-  bottom: 23px;
-  right: 619px;
-  width: 40px;
-  height: 41px;
-}
-
-#toLivingRoomUp {
-  bottom: 23px;
-  right: 619px;
-  width: 40px;
-  height: 41px;
-}
-
-#toLivingRoom {
+#leftDoor {
   top: 188px;
   left: 131px;
   width: 79px;
   height: 359px;
 }
 
-#toLivingRoomRight {
-  top: 199px;
-  right: 102px;
-  width: 79px;
-  height: 358px;
+#arrowDown {
+  bottom: 23px;
+  right: 619px;
+  width: 40px;
+  height: 41px;
 }
 
-#toBathroom {
-  top: 188px;
-  left: 131px;
-  width: 79px;
-  height: 359px;
+/*DETAIL ROUTING*/
+
+#toDeskDetail {
+  top: 278px;
+  right: 314px;
+  width: 261px;
+  height: 120px;
+}
+
+#toBookDetail {
+  top: 274px;
+  left: 221px;
+  width: 235px;
+  height: 192px;
+}
+
+#toPillowDetail {
+  bottom: 241px;
+  left: 528px;
+  width: 73px;
+  height: 50px;
+}
+
+#toNotebookDetail {
+  bottom: 206px;
+  left: 286px;
+  width: 131px;
+  height: 90px;
+}
+
+#cross {
+  top: 38px;
+  right: 92px;
+  width: 56px;
+  height: 53px;
 }

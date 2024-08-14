@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Modal } from '../../Modal';
-import livingRoomImage from '../../assets/living-room.png';
+import livingRoomImage from '../../assets/living-room-2.png';
 import './livingRoom.css';
 import '../routing.css';
 
-export const LivingRoom = () => {
+export const LivingRoomTwo = () => {
   const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState('');
@@ -16,12 +16,8 @@ export const LivingRoom = () => {
     setModalContent(item);
   };
 
-  const handleRoomChange = (room: string) => {
-    if (room === 'workRoom') {
-      navigate('/workRoom');
-    } else {
-      navigate('/livingRoomDown');
-    }
+  const handleViewChange = (path: string) => {
+    navigate(`/${path}`);
   };
 
   return (
@@ -29,9 +25,8 @@ export const LivingRoom = () => {
       <div className="image-container">
         <img src={livingRoomImage} />
         <div className="clickable-area" id="lockedDoor" onClick={() => handleItemClick('locked door')} />
-        <div className="clickable-area" id="pillow" onClick={() => handleItemClick('pillow')} />
-        <div className="clickable-area" id="toWorkRoom" onClick={() => handleRoomChange('workRoom')} />
-        <div className="clickable-area" id="toLivingRoomDown" onClick={() => handleRoomChange('livingRoomDown')} />
+        <div className="clickable-area" id="rightDoor" onClick={() => handleViewChange('work-room')} />
+        <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('living-room-one')} />
       </div>
       <Modal content={modalContent} />
     </div>

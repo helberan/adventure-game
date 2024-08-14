@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Modal } from '../../Modal';
-import livingRoomDownImage from '../../assets/living-room-down.png';
+import livingRoomOneImage from '../../assets/living-room-1.png';
 import './livingRoom.css';
 import '../routing.css';
 
-export const LivingRoomDown = () => {
+export const LivingRoomOne = () => {
   const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState('');
@@ -16,20 +16,16 @@ export const LivingRoomDown = () => {
     setModalContent(item);
   };
 
-  const handleRoomChange = (room: string) => {
-    if (room === 'bathroom') {
-      navigate('/bathroom');
-    } else {
-      navigate('/');
-    }
+  const handleViewChange = (path: string) => {
+    navigate(`/${path}`);
   };
 
   return (
     <div className="location">
       <div className="image-container">
-        <img src={livingRoomDownImage} />
-        <div className="clickable-area" id="toLivingRoomUp" onClick={() => handleRoomChange('livingRoom')} />
-        <div className="clickable-area" id="toBathroom" onClick={() => handleRoomChange('bathroom')} />
+        <img src={livingRoomOneImage} />
+        <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('living-room-two')} />
+        <div className="clickable-area" id="toPillowDetail" onClick={() => handleViewChange('lr-pillow')} />
       </div>
       <Modal content={modalContent} />
     </div>
