@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import livingRoomOneImage from '../../assets/living-room-1.png';
 import pictureImage from '../../assets/picture.png';
@@ -10,13 +10,23 @@ export const LivingRoomOne = () => {
   const [pictureClicked, setPictureClicked] = useState<boolean>(false);
 
   const handlePictureClick = () => {
-    setPictureClicked(!pictureClicked);
-    localStorage.setItem('picturePosition', 'true');
+    if (pictureClicked) {
+      localStorage.setItem('picturePosition', 'false');
+      setPictureClicked(false);
+    } else {
+      localStorage.setItem('picturePosition', 'true');
+      setPictureClicked(true);
+    }
   };
 
   const handleViewChange = (path: string) => {
     navigate(`/adventure-game/${path}`);
   };
+
+  useEffect(() => {
+    const picturePosition = localStorage.getItem('picturePosition') === 'true';
+    setPictureClicked(picturePosition);
+  }, []);
 
   return (
     <div className="location">

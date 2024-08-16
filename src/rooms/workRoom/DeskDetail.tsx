@@ -18,9 +18,7 @@ export const DeskDetail = () => {
     e.preventDefault();
     if (code !== '1157') {
       setCodeError(true);
-      console.log('wrong code');
     } else {
-      console.log('code submitted: ', code);
       setCodeError(false);
       localStorage.setItem('pcUnlocked', 'true');
       setPcUnlocked(true);
