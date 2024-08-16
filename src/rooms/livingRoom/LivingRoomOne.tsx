@@ -9,11 +9,9 @@ export const LivingRoomOne = () => {
   const navigate = useNavigate();
   const [pictureClicked, setPictureClicked] = useState<boolean>(false);
 
-  const handleItemClick = (item: string) => {
-    if (item === 'picture') {
-      setPictureClicked(!pictureClicked);
-      localStorage.setItem('picturePosition', 'true');
-    }
+  const handlePictureClick = () => {
+    setPictureClicked(!pictureClicked);
+    localStorage.setItem('picturePosition', 'true');
   };
 
   const handleViewChange = (path: string) => {
@@ -26,8 +24,8 @@ export const LivingRoomOne = () => {
         <img src={livingRoomOneImage} />
         <div className="clickable-area" id="arrowDown" onClick={() => handleViewChange('')} />
         <div className="clickable-area" id="toPillowDetail" onClick={() => handleViewChange('lr-pillow')} />
-        <div className={localStorage.getItem('picturePosition') === 'true' ? `picture-area-clicked` : `picture-area`}>
-          <img src={pictureImage} onClick={() => handleItemClick('picture')} />
+        <div className={pictureClicked ? `picture-area-clicked` : `picture-area`}>
+          <img src={pictureImage} onClick={handlePictureClick} />
         </div>
       </div>
     </div>

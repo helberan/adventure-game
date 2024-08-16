@@ -7,8 +7,8 @@ import '../routing.css';
 
 export const LivingRoomTwo = () => {
   const navigate = useNavigate();
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [modalContent, setModalContent] = useState('');
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const [modalContent, setModalContent] = useState<string>('');
 
   const handleItemClick = (item: string) => {
     const isKeyPickedUp = localStorage.getItem('keyPickedUp');

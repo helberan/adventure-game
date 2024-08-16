@@ -5,15 +5,15 @@ import '../routing.css';
 export const NotebookDetail = () => {
   const navigate = useNavigate();
 
-  const handleViewChange = (path: string) => {
-    navigate(`/adventure-game/${path}`);
+  const handleViewChange = () => {
+    navigate('/adventure-game/lr-pillow');
   };
 
   return (
     <div className="location">
       <div className="image-container">
         <img src={notebookDetailImage} />
-        <div className="clickable-area" id="cross" onClick={() => handleViewChange('lr-pillow')} />
+        <div className="clickable-area" id="cross" onClick={handleViewChange} />
       </div>
     </div>
   );
