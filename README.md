@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Escape Room Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple 2D escape room game built with React and TypeScript, and set up using Vite. The game features three rooms where the player needs to solve simple puzzles and find a hidden object to unlock the exit door.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive puzzles with clickable objects
+- Simple and intuitive user interface
+- Persistent game state using `localStorage`
 
-## Expanding the ESLint configuration
+## Technology used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Vite
+- Canva
 
-- Configure the top-level `parserOptions` property like this:
+## Try it out
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To play the game visit: [https://helberan.github.io/adventure-game/](https://helberan.github.io/adventure-game/)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Project Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To set up the project on your local machine, follow these steps:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### `git clone <repository-url>`
+
+Clone the repository to your local machine. Replace "<repository-url>" with the URL of our GitHub repository.
+
+### `npm install`
+
+Install the project dependencies. This command will read the package.json file and install all the required packages.
+
+### `npm run dev`
+
+Runs the app in the development mode.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Plan for next development
+
+- add more rooms
+- add more complex puzzles
+- add more pickable objects and an inventory
